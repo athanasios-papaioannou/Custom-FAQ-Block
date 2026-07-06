@@ -1,0 +1,221 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-custom-faq-block {
+	border: 1px dotted #f00;
+}
+
+/*GLOBAL WRAPPER*/
+.faq-wrapper {
+	max-width: 700px;
+	margin: 0 auto;
+	font-family: system-ui, -apple-system, sans-serif;
+}
+
+/*MAIN BLOCK COLLAPSING*/
+.faq-block-content {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	overflow: hidden;
+	max-height: 2000px;
+	opacity: 1;
+	transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+.faq-block-content.is-collapsed {
+	max-height: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+.faq-block-toggle {
+	cursor: pointer;
+	user-select: none;
+
+	padding: 12px;
+	border-radius: 8px;
+
+	background: #f1f1f1;
+
+	display: flex;
+	align-items: center;
+	gap: 8px;
+
+	transition: all 0.2s ease;
+}
+.faq-block-toggle:hover {
+	background: #e7e7e7;
+	transform: translateX(2px);
+}
+
+/*FIELD WRAPPER*/
+.faq-field {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+/*LABELS*/
+.faq-field label {
+	font-size: 13px;
+	font-weight: 600;
+	color: #444;
+}
+/*RICHTEXT AREA*/
+.faq-field .block-editor-rich-text__editable {
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	padding: 10px;
+	background: #fff;
+	min-height: 44px;
+
+	transition: border-color 0.2s ease,
+	box-shadow 0.2s ease;
+}
+/*FOCUS STATE*/
+.faq-field .block-editor-rich-text__editable:focus {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+	outline: none;
+}
+
+/*ADD FAQ SECTION*/
+.faq-new-item {
+	background: #fff;
+	border: 1px solid #e5e5e5;
+	padding: 16px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.faq-new-item h3, .faq-new-item h4 {
+	line-height:0px;
+}
+
+.faq-new-item input,
+.faq-new-item textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	font-size: 14px;
+}
+
+.faq-new-item button {
+	background: #2271b1;
+	color: #fff;
+	border: none;
+	padding: 10px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.faq-new-item button:hover {
+	background: #135e96;
+}
+
+/*FAQ ITEM CARD*/
+.faq-item {
+	background: #fafafa;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 12px;
+	margin-bottom: 10px;
+
+	transition: all 0.2s ease;
+}
+
+.faq-item:hover {
+	background: #f5f5f5;
+}
+
+/*QUESTION HEADER*/
+.faq-item h3 {
+	margin: 0;
+	font-size: 15px;
+	cursor: pointer;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*EDIT FORM*/
+.faq-edit-form {
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	background: #fff;
+
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.faq-edit-form input,
+.faq-edit-form textarea {
+	width: 100%;
+	padding: 8px;
+	border-radius: 6px;
+	border: 1px solid #ddd;
+}
+
+.faq-edit-form button:last-child {
+	background: #d63638;
+	color: white;
+}
+
+.faq-edit-form button:last-child:hover {
+	background: #b32d2e;
+}
+
+/*ACTION BUTTONS (EDIT / DELETE)*/
+.faq-item button {
+	margin-top: 8px;
+	margin-right: 6px;
+
+	padding: 6px 10px;
+	border-radius: 6px;
+	border: none;
+	cursor: pointer;
+	font-size: 12px;
+}
+.faq-edit {
+	background: #2271b1;
+	color: white;
+}
+.faq-delete {
+	background: #d63638;
+	color: white;
+}
+
+.faq-delete:hover {
+	background: #b32d2e;
+}
+
+/*REORDER CONTROLS*/
+.faq-controls {
+	margin-top: 10px;
+	display: flex;
+	gap: 8px;
+}
+
+.faq-controls button {
+	padding: 5px 8px;
+	border-radius: 6px;
+	border: 1px solid #ddd;
+	background: #fff;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+.faq-controls button:hover {
+	background: #f0f0f0;
+}

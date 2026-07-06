@@ -1,0 +1,92 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-custom-faq-block {
+	background-color: #21759b;
+	color: #fff;
+	padding: 2px;
+}
+/* FAQ WRAPPER */
+.faq-wrapper {
+	max-width: 700px;
+	margin: 0 auto;
+	font-family: Arial, sans-serif;
+}
+/* GLOBAL CONTROLS (expand/collapse all) */
+.faq-global-controls {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+.faq-global-controls button {
+	padding: 10px 14px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: 600;
+	background: var(--faq-button-color);
+	color: var(--faq-button-text-color);
+	transition: all 0.2s ease;
+}
+.faq-global-controls button:hover {
+	background: var(--faq-button-hover-color);
+}
+
+/* FAQ ITEM (contains question and answer) */
+.faq-item {
+	border: 1px solid #e5e5e5;
+	border-radius: 10px;
+	margin-bottom: 12px;
+	overflow: hidden;
+	background: #fff;
+	transition: all 0.2s ease;
+}
+/* FAQ QUESTION */
+.faq-question {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.faq-question:hover {
+	background: #f9f9f9;
+}
+
+.faq-icon {
+	font-size: 20px;
+	font-weight: bold;
+	transition: transform 0.2s ease;
+}
+.faq-question.is-active {
+	background: #f9f9f9;
+}
+
+/* FAQ ANSWER */
+.faq-answer {
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+
+	transition:
+		max-height 0.25s ease,
+		opacity 0.2s ease;
+}
+.faq-answer.is-open {
+	max-height: 500px;
+	opacity: 1;
+}
+
+.faq-answer-inner {
+	padding: 16px 16px 16px 16px;
+	color: #555;
+	white-space: normal;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}

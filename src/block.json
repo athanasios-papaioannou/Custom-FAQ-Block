@@ -1,0 +1,78 @@
+{
+	"apiVersion": 3,
+	"name": "create-block/custom-faq-block",
+	"version": "1.4.0",
+	"title": "Custom Faq Block",
+	"category": "widgets",
+	"icon": "list-view",
+	"description": "A dynamic FAQ block featuring CRUD operations, item reorder, rich text editing, and interactive frontend accordion UI.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "custom-faq-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"attributes": {
+		"faqs": {
+			"type": "array",
+			"default": 
+			[
+				{
+					"question": "What is a Gutenberg block?",
+					"answer": "A Gutenberg block is a modular content component in WordPress that allows users to build pages visually using reusable elements."
+				},
+				{
+					"question": "Can I edit these FAQs after publishing?",
+					"answer": "Yes, all FAQ items are stored as block attributes and can be edited directly inside the Gutenberg editor at any time."
+				},
+				{
+					"question": "Does this block support dynamic updates?",
+					"answer": "Yes, the block updates in real time using React state and persists changes through WordPress block attributes."
+				},
+				{
+					"question": "Can I reorder FAQ items?",
+					"answer": "Yes, you can move items up and down to change their order using built-in reorder controls."
+				},
+				{
+					"question": "Is the frontend interactive?",
+					"answer": "Yes, the frontend uses vanilla JavaScript to provide accordion functionality with smooth open/close animations."
+				},
+				{
+					"question": "Can I delete FAQ items?",
+					"answer": "Yes, each FAQ item includes a delete option with a confirmation prompt to avoid accidental removal."
+				},
+				{
+					"question": "Does this block use React?",
+					"answer": "Yes, the editor side uses React via the WordPress block editor environment."
+				},
+				{
+					"question": "Can I style the FAQ block?",
+					"answer": "Yes, the block includes custom SCSS styling and can be extended or overridden with theme styles."
+				},
+				{
+					"question": "Is this production ready?",
+					"answer": "It is a fully functional custom Gutenberg block suitable for production with minor enhancements for scalability."
+				},
+				{
+					"question": "What features does this FAQ block include?",
+					"answer": "It includes add, edit, delete, reorder, expand/collapse, rich text support, and frontend accordion functionality."
+				}
+			]
+		},
+		"buttonColor": {
+			"type": "string",
+			"default": "#f1f1f1"
+		},
+		"buttonHoverColor": {
+		"type": "string",
+		"default": "#e2e2e2"
+		},
+		"buttonTextColor": {
+		"type": "string",
+		"default": "#000000"
+		}
+	}
+}
