@@ -79,4 +79,12 @@ The block provides a modern FAQ management experience directly inside Gutenberg 
 * Keyboard navigation support
 * Dark mode styling support
 
-Developed by Athanasios Papaioannou
+## 👨‍💻 Author
+
+Developed by **Athanasios Papaioannou**
+
+🌐 Portfolio  
+https://www.athanasiospapaioannou.gr
+
+💻 GitHub  
+https://github.com/athanasios-papaioannou
